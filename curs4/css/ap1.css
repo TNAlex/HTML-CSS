@@ -1,0 +1,34 @@
+nav{
+    background-color: brown;
+    width: 100%;
+    height: 50px;
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+
+}
+nav ul#meniu {
+    list-style-type: circle;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul#meniu li {
+    /* float: left; */
+    display: inline-block;
+    padding: 16px 15px;
+    margin: 0px;
+    background-color: black;
+}
+nav ul#meniu li:hover {
+    background-color: darkred;
+}
+nav ul#meniu li:hover a {
+    color: yellow;
+}
+nav ul#meniu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
