@@ -1,0 +1,35 @@
+h1 {
+    color: blue;
+}
+h2 {
+    color: green;
+}
+h1, h2{
+    text-align: center;
+}
+p {
+    font-size: 18px !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Cand linia de comanda arata asa: div p {color:red;} o sa ia tot din linia de comanda div */
+/* div p { 
+    color:red;
+} */
+ /* Cand linia de comanda arata asa div > p {color: red;} ia doar elementele selectate cum este aici p */
+div > p {
+    color: red;
+}
+div {
+    background-color: blue;
+}
+/* Sau din linia de comanda <div> sa coloreze doar linia <section> toate paragrafele <p> ex: div section p {color: purple;} ex:1 */
+/* section p {
+    color: purple;
+} */
+/* Ex 2 */
+.hightlight p {
+    color: purple;
+}
+.myclass p {
+    font-size: 34px;
+}
