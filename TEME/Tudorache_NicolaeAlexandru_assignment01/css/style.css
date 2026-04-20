@@ -1,0 +1,252 @@
+/* --- IMPORT FONTURI ȘI VARIABILE --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap');
+
+:root {
+    --black: #1a1a1a;
+    --crem-bg: #f9f4f0; 
+    --text-gri: #666;
+    --footer-border: #eee;
+}
+
+/* --- RESET ȘI GLOBALE --- */
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: var(--black);
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* --- COMPONENTE FORMULAR & UI --- */
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: var(--black);
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-dark {
+    background-color: var(--black);
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    border: 1px solid #f0f0f0 !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    padding: 0 8px;
+    color: #ccc;
+}
+
+/* --- HEADER / NAVBAR --- */
+header { 
+    background-color: var(--crem-bg);
+    border-bottom: 1px solid var(--footer-border); 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.brand img {
+    height: 40px; 
+}
+
+.primary-nav { 
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: flex-start;
+    margin-left: 40px; 
+}
+
+.primary-nav a { 
+    font-size: 14px; 
+    font-weight: 500; 
+    text-transform: capitalize; 
+}
+
+.sale-link { 
+    color: #ff4d4d !important; 
+}
+
+.actions { 
+    display: flex; 
+    align-items: center;
+    gap: 20px; 
+}
+
+.search {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.search label { 
+    color: #ccc; 
+    font-size: 12px;
+    font-weight: 300; 
+}
+
+.search i { 
+    color: #ccc; 
+    font-size: 12px; 
+}
+
+/* --- SECTION NEWSLETTER --- */
+.newsletter-zone {
+    background-color: #e5d8cd;
+    padding: 60px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.newsletter-msg { 
+    font-size: 28px;
+    font-weight: 900;
+    max-width: 400px;
+    line-height: 1.1; 
+}
+
+.newsletter-form { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px; 
+}
+
+.newsletter-form input { 
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    outline: none; 
+}
+
+.newsletter-form button { 
+    padding: 12px; 
+    background: var(--black); 
+    color: #fff; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+/* --- FOOTER --- */
+.footer-wrap { 
+    padding: 60px 5%; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+.footer1 { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 50px; 
+    margin-bottom: 60px; 
+}
+
+.footer-col h4 { 
+    font-size: 14px; 
+    margin-bottom: 25px; 
+    color: #000; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+.footer-col li { 
+    margin-bottom: 12px; 
+}
+
+.footer-col a { 
+    color: #888; 
+    font-size: 13px; 
+}
+
+.footer-col li:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.footer2 { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-top: 1px solid var(--footer-border); 
+    padding-top: 30px; 
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .primary-nav { 
+        display: none; 
+    }
+    
+    .footer1 { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .newsletter-zone { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 30px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .footer1 {
+        grid-template-columns: 1fr; 
+    }
+
+    .footer2 {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

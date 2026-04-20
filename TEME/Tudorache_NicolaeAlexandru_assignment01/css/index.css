@@ -1,0 +1,257 @@
+/* ======================== INDEX ======================= */
+.main-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 5%;
+    gap: 40px; 
+    align-items: flex-start;
+}
+
+/* =============== SIDEBAR ================== */
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fff;
+}
+
+.sidebar h3 {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+.filter-section label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-item input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.apply-filters-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.apply-filters-btn:hover {
+    background: #333;
+}
+
+/* ===============Grid ============= */
+.products-area {
+    flex: 1;
+}
+
+.products-area h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* ==========  CARD PRODUCT ========== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+.product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px; 
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease; 
+    box-shadow: 0.2s;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.image-box {
+    background-color: #f6f6f6;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge-uri (Sale/Procent) */
+.badge-stack {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sale-tag {
+    background: #ff4d4d;
+    color: white;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.percent-tag {
+    background: white;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.product-card h4 {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.price .old {
+    color: #ff0000; 
+    text-decoration: line-through; 
+    margin-right: 8px; 
+    font-size: 0.9em; 
+}
+
+
+.price .new {
+    color: #000;
+    font-weight: 700;
+}
+
+/* Butonul "Add to Cart"  */
+.cart-btn {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.page-btn {
+    padding: 8px 15px;
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.page-btn.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+/* ========RESPONSIVE (Media Queries) ============== */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 580px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    
+    .image-box {
+        height: 200px;
+    }
+}

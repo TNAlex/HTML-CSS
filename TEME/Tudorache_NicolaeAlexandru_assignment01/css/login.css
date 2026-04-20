@@ -1,0 +1,136 @@
+/* =============== LAYOUT PAGINA LOGIN ============== */
+.login-page {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.breadcrumbs {
+    width: 100%;
+    max-width: 500px; 
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.login-page h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ============= LOGIN BOX =================== */
+.login-card {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border: 1px solid #eee; 
+    border-radius: 12px;    
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #000;
+}
+
+/* ============= OBTIONS ================ */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.remember-me input {
+    cursor: pointer;
+}
+
+.forgot-pass {
+    color: #888;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.forgot-pass:hover {
+    color: #000;
+}
+
+/* ============== BUTON LOGIN & CREARE CONT =============== */
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #333;
+}
+
+.create-account {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.create-account a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ========== RESPONSIVE =========== */
+@media (max-width: 550px) {
+    .login-card {
+        padding: 30px 20px;
+        border: none; 
+    }
+    
+    .login-page h1 {
+        font-size: 1.6rem;
+    }
+}
