@@ -1,0 +1,18 @@
+body{
+    counter-reset: number;
+}
+h1 {
+    color: blue;
+    counter-reset: numberh3;
+}
+h1::before{
+    counter-increment: number;
+    content: counter(number) " ";
+}
+h3 {
+    color: green;
+}
+h3::before{
+    counter-increment: numberh3;
+    content:counter(number)"."counter(numberh3)" ";
+}

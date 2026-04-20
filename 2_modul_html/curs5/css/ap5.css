@@ -1,0 +1,13 @@
+
+p:nth-child(2n){
+    color: red;
+}
+p:nth-child(2n+1):not(:last-child){
+    color: blue;
+}
+p:first-child{
+    color: green;
+}
+p:last-child{
+    color: blueviolet;
+}

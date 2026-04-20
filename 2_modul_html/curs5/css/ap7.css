@@ -1,0 +1,12 @@
+body{
+    font-family: dancingscript, cursive;
+    font-size: 15px;
+}
+nav {
+    background-color: lightpink;
+    padding: 44px;
+}
+nav > ul {
+    margin: 0;
+    padding: 0;
+}

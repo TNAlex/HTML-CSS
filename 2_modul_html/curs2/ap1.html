@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicatia 1</title>
+</head>
+<body>
+    <h1>Formular</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" placeholder="Va rugam introduceti Nume" required><br><br>
+
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" name="prenume"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="pass">Parola:</label>
+        <!--La pattern="[A-Za-z0-9]{8,20}" adica cu litere mari si mici si cifre  minim 8 caractere maxim 20-->
+        <input type="password" id="pass" name="pass" required minlength="10" pattern="[A-Za-z0-9]{8,20}"><br><br>
+
+        <label for="poza">Poza:</label>
+        <input type="file" id="poza" name="poza"><br><br>
+
+        <label for="comentariu">Comentariu:</label><br>
+        <textarea id="comentariu" name="comentariu" rows="4" cols="50"></textarea><br><br>
+
+        <label for="orar">Alege orarul:</label><br>
+        <input type="radio" name="orar" id="orar1" value="varianta1">
+        <label for="orar1">Varianta 1</label>
+        <input type="radio" name="orar" id="orar2" value="varianta2">
+        <label for="orar2">Varianta 2</label><br><br>
+
+        <label for="materii">Alege materii-ile:</label><br>
+        <select name="materii" id="materii" multiple>
+            <option value="mate">Matematica</option>
+            <option value="info">Informatica</option>
+            <option value="fizica">Fizica</option>
+            <option value="chimie">Chimie</option>
+        </select>
+        <br><br>
+        <label for="">Transport:</label>
+        <input type="checkbox" name="transport" id="transport1" value="da">
+        <label for="transport1">Am nevoie de transport</label><br><br>
+        <input type="checkbox" name="metrou" id="metrou" value="metrou">
+        <label for="metrou">Voi folosii metroul</label><br><br>
+
+        <input type="submit" value="Trimite">
+
+    </form>
+</body>
+</html>
